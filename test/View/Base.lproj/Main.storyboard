@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6pZ-Ru-pw9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can search via Map" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LJ-aQ-CcX">
+                                <rect key="frame" x="0.0" y="108" width="414" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VKD-uK-6ae">
+                                <rect key="frame" x="0.0" y="129.5" width="414" height="766.5"/>
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="bib-x2-gy2">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9LJ-aQ-CcX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2uY-Qc-8Hi"/>
+                            <constraint firstAttribute="bottom" secondItem="VKD-uK-6ae" secondAttribute="bottom" id="6bf-Ar-MvG"/>
+                            <constraint firstItem="VKD-uK-6ae" firstAttribute="top" secondItem="9LJ-aQ-CcX" secondAttribute="bottom" id="RfP-XW-Ptk"/>
+                            <constraint firstItem="9LJ-aQ-CcX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V4S-FL-Zlb"/>
+                            <constraint firstItem="bib-x2-gy2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aO4-v0-rW7"/>
+                            <constraint firstItem="bib-x2-gy2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="an1-Tq-zJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9LJ-aQ-CcX" secondAttribute="trailing" id="dti-y9-uhH"/>
+                            <constraint firstItem="VKD-uK-6ae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rYk-v4-h83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VKD-uK-6ae" secondAttribute="trailing" id="zJL-p4-SuS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BAa-rf-ksr"/>
+                    <connections>
+                        <outlet property="isLoadingView" destination="bib-x2-gy2" id="ubT-Ze-1mC"/>
+                        <outlet property="mapkitView" destination="VKD-uK-6ae" id="q5H-zh-Ifv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910.14492753623199" y="-10.044642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jg8-do-Vbu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6pZ-Ru-pw9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E9b-T4-hfJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dUI-dZ-O5o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ui5-Rs-GiG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="-10.044642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
